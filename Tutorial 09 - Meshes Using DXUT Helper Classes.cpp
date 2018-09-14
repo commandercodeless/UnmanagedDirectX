@@ -106,8 +106,8 @@ ID3D11SamplerState         *g_pSamLinear      = NULL;
 // The only one I have coded is rotate about Y, we need an x, y, z		//
 // position and maybe rotates about other axes.							//
 //**********************************************************************//
-float		 g_f_TigerRY            = XMConvertToRadians(45);  //45º default
-float		 g_f_TigerRX			= XMConvertToRadians(45);  //45º default
+float		 g_f_TigerRY            = XMConvertToRadians(45);  //45ï¿½ default
+float		 g_f_TigerRX			= XMConvertToRadians(45);  //45ï¿½ default
 
 bool		 g_b_LeftArrowDown      = false;	//Status of keyboard.  Thess are set
 bool		 g_b_RightArrowDown     = false;	//in the callback KeyboardProc(), and 
@@ -838,7 +838,7 @@ void CALLBACK OnD3D11FrameRender( ID3D11Device* pd3dDevice, ID3D11DeviceContext*
 
 
 	//**************************************************************************//
-	// Floor Shit.															//
+	// Floor        															//
 	//**************************************************************************//
 	
 	XMMATRIX matFloorTranslate = XMMatrixTranslation(0, 8, 0);
@@ -859,7 +859,7 @@ void CALLBACK OnD3D11FrameRender( ID3D11Device* pd3dDevice, ID3D11DeviceContext*
 	RenderMesh(pd3dImmediateContext, &g_MeshFloor, g_pPixelShader);
 
 	//**************************************************************************//
-	//SkyBox Shit																//
+	//SkyBox    																//
 	//**************************************************************************//
 	XMMATRIX matSkyTranslate = XMMatrixTranslation(0, 5, 0);
 	XMMATRIX matSkyScale = XMMatrixScaling(1, 1, 1);
@@ -879,7 +879,7 @@ void CALLBACK OnD3D11FrameRender( ID3D11Device* pd3dDevice, ID3D11DeviceContext*
 
 	RenderMesh(pd3dImmediateContext, &g_MeshSkyBox, g_pSkyPixelShader);
 	//**************************************************************************//
-	//Wing Shit																	//
+	//Wing  																	//
 	//**************************************************************************//
 	XMMATRIX matDogFix = XMMatrixTranslation(0.2, 0.25, 0);
 	XMMATRIX matDogFix2 = XMMatrixTranslation(0, 0.25, 0);
